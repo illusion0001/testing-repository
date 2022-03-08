@@ -11,7 +11,7 @@ jobs:
       - name: Run a one-line script
         env:
           testing: ${{ secrets.test }}
-        run: python test.py "$test"
+        run: python test.py "$testing"
 
       - name: Run a multi-line script
         run: |
