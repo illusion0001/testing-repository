@@ -10,8 +10,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run a one-line script
-        with:
-          env: {{ secrets.test }}
+        env: {{ secrets.test }}
         run: echo Hello, world!
 
       - name: Run a multi-line script
