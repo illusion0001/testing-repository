@@ -12,7 +12,7 @@ jobs:
       - name: Run a one-line script
         env:
           testing: ${{ secrets.test }}
-        run: echo Hello, world! $"testing" > test.dat
+        run: echo Hello, world! "$testing" > test.dat
 
       - name: Run a multi-line script
         run: |
