@@ -1,4 +1,4 @@
 import sys
 
 text = sys.argv[1]
-print(text)
+print('should not be leaked:' text)
