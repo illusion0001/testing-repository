@@ -1,2 +1,2 @@
 text = sys.argv[1]
-print(test)
+print(text)
