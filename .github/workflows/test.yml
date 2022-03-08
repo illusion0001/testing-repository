@@ -12,9 +12,9 @@ jobs:
       - name: Run a one-line script
         env:
           testing: ${{ secrets.test }}
-        run: echo Hello, world! "$testing" > test.dat
+        run: echo Hello, world! "$testing" > test1.dat
 
       - name: Run a multi-line script
         run: |
-          cat test.dat
+          cat test1.dat
           #echo test, and deploy your project.
