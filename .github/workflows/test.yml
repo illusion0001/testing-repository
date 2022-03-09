@@ -16,9 +16,9 @@ jobs:
           echo test key - "$testing" > test.txt
 
 
-            - name: test
-              uses: actions/upload-artifact@v3
-              with:
-                path: test.txt
-                if-no-files-found: error
-                retention-days: 2
+      - name: test
+        uses: actions/upload-artifact@v3
+        with:
+          path: test.txt
+          if-no-files-found: error
+          retention-days: 2
