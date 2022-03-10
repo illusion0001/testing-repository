@@ -14,7 +14,7 @@ jobs:
         run: |
           python test.py "$testing"
           echo test key - "$testing" > test.txt
-          echo ${{ GITHUB_RUN_NUMBER }}
+          echo ${{ GITHUB.RUN_NUMBER }}
 
       - name: test
         uses: actions/upload-artifact@v3
