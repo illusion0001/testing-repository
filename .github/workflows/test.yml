@@ -7,14 +7,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Run a one-line script
         env:
           testing: ${{ secrets.test }}
         run: |
           python test.py "$testing"
           echo test key - "$testing" > test.txt
-          git rev-list HEAD --count
+          echo ${{ GITHUB_RUN_NUMBER }}
 
       - name: test
         uses: actions/upload-artifact@v3
