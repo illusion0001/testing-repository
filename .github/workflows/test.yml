@@ -8,9 +8,7 @@ jobs:
 
     steps:
       - name: Run a one-line script
-        env:
-          testing: ${{ secrets.test }}
         run: |
           current=`date '+%Y:%m:%d %H:%M:%S - %a'`;
           touch $current
-          ls
+          ls -R
