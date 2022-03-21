@@ -9,11 +9,12 @@ jobs:
     steps:
       - name: Run a one-line script
         run: |
+          mkdir test
           current=`date '+%Y:%m:%d %H:%M:%S - %a'`;
-          touch $current
+          touch test/$current
 
       - name: test
         uses: actions/upload-artifact@v3
         with:
-          path: /*
+          path: test/*
           retention-days: 1
