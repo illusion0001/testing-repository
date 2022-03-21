@@ -12,6 +12,7 @@ jobs:
         env:
           testing: ${{ secrets.test }}
         run: |
+          #! /bin/bash
           current = `date '+%Y:%m:%d %H:%M:%S - %a'`;
           touch $current
           ls
