@@ -10,7 +10,7 @@ jobs:
       - name: Run a one-line script
         run: |
           mkdir test
-          current=`date '+%Y:%m:%d %H:%M:%S - %a'`;
+          current=`date '+%Y-%m-%d-%H-%M-%S - %a'`;
           touch test/$current
 
       - name: test
