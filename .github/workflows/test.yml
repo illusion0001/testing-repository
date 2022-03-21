@@ -10,9 +10,9 @@ jobs:
       - name: Run a one-line script
         run: |
           mkdir test
-          current=Built on `date '+%Y-%m-%d-%H-%M-%S-%a'`;
+          current=`date '+%Y-%m-%d-%H-%M-%S-%a'`;
           ls test
-          touch test/$current
+          touch "test/Built on $current"
 
       - name: test
         uses: actions/upload-artifact@v3
