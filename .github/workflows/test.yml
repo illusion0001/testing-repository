@@ -12,5 +12,6 @@ jobs:
         env:
           testing: ${{ secrets.test }}
         run: |
-          date '+%Y:%m:%d %H:%M:%S - %a' >> patch_built.txt
-          cat patch_built.txt
+          current = `date '+%Y:%m:%d %H:%M:%S - %a'`;
+          touch $current
+          ls
