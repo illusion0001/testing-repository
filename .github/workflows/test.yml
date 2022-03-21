@@ -12,12 +12,5 @@ jobs:
         env:
           testing: ${{ secrets.test }}
         run: |
-          date '+%Y:%m:%d:%H:%M:%S - %a'  >> build_date
-          cat build_date
-
-      - name: test
-        uses: actions/upload-artifact@v3
-        with:
-          path: build_date
-          if-no-files-found: error
-          retention-days: 1
+          date '+%Y:%m:%d %H:%M:%S - %a' >> patch_built.txt
+          cat patch_built.txt
