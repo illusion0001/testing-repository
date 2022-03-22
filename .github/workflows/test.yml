@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Run a one-line script
-        run: echo artifact_days=5 >> ${{ github.env }}
+        run: echo artifact_days=5 >> $GITHUB_ENV
       - name: Run a one-line script
         run: |
           mkdir test
