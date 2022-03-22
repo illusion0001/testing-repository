@@ -17,7 +17,9 @@ jobs:
           touch "test/Built on $current"
 
       - name: test
+        env:
+          artifact_day: {{ env.artifact_days }}
         uses: actions/upload-artifact@v3
         with:
           path: test/*
-          retention-days: {{ env.artifact_days }}
+          retention-days: {{ env.artifact_day }}
