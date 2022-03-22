@@ -8,6 +8,8 @@ jobs:
 
     steps:
       - name: Run a one-line script
+        run: echo artifact_days=5 >> {{ github.env }}
+      - name: Run a one-line script
         run: |
           mkdir test
           current=`date '+%Y-%m-%d-%H-%M-%S-%a'`;
@@ -18,4 +20,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           path: test/*
-          retention-days: 1
+          retention-days: {{ env.artifact_days }}
