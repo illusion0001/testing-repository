@@ -8,13 +8,9 @@ jobs:
 
     steps:
       - name: Run a one-line script
-        run: echo artifact_days=5 >> $GITHUB_ENV
-      - name: Run a one-line script
-        run: |
-          mkdir test
-          current=`date '+%Y-%m-%d-%H-%M-%S-%a'`;
-          ls test
-          touch "test/Built on $current"
+        run: echo artifact_days=4 >> $GITHUB_ENV
+
+      - run: echo test >> test/test.txt
 
       - name: test
         uses: actions/upload-artifact@v3
