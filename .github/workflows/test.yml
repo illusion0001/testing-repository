@@ -10,7 +10,9 @@ jobs:
       - name: Run a one-line script
         run: echo artifact_days=4 >> $GITHUB_ENV
 
-      - run: echo test >> test/test.txt
+      - run: |
+          mkdir test
+          echo test >> test/test.txt
 
       - name: test
         uses: actions/upload-artifact@v3
