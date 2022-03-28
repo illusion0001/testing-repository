@@ -7,4 +7,3 @@ test+=$'\n```'
 test+=$'\n\n'
 test+='</details>'
 echo "$test" > cl.md
-cat cl.md
