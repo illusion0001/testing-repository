@@ -10,12 +10,4 @@ jobs:
       - name: Run a one-line script
         run: echo artifact_days=4 >> $GITHUB_ENV
 
-      - run: |
-          mkdir test
-          echo test >> test/test.txt
-
-      - name: test
-        uses: actions/upload-artifact@v3
-        with:
-          path: test/*
-          retention-days: ${{ env.artifact_days }}
+      - run: git log --oneline | tac | nl | tac
