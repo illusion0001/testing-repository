@@ -13,7 +13,8 @@ jobs:
           fetch-depth: 0
 
       - run: |
-          git rev-list HEAD --count
+          commit = $(git rev-list HEAD --count)
+          echo $commit
           chmod +x *.sh
           ./cl.sh
 
