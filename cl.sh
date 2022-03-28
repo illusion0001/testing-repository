@@ -1,4 +1,4 @@
-test=$'\n<details>'
+test=$'<details>'
 test+=$'\n<summary>Changelog (Click to Expand)</summary>'
 test+=$'\n\n'
 test+=$'```'
