@@ -12,4 +12,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: ./gencl.sh 
+      - run: |
+           chmod +x *.sh
+          ./gencl.sh 
