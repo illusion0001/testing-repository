@@ -14,4 +14,5 @@ jobs:
 
       - run: |
           echo $(git log --oneline)$'\n<details>'$'\n<summary>Changelist</summary>'$'\n\`\`\`''\`\`\`'$'\n''</details>' > test5.md
+          echo test
           cat test5.md
