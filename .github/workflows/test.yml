@@ -15,11 +15,11 @@ jobs:
       - run: |
           test+=$'\n<details>'
           test+=$'\n<summary>Changelist</summary>'
-          test+=$'\n'
+          test+=$'\n\n'
           test+='```'
-          test=$(git log --oneline)
+          test+=$(git log --oneline)
           test+='```'
-          test+=$'\n'
+          test+=$'\n\n'
           test+='</details>'
           echo "$test" > test4.md
           echo test
