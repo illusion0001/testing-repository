@@ -13,7 +13,9 @@ jobs:
           fetch-depth: 0
 
       - run: |
-          echo Changelist: >> test.txt
-          git log --oneline >> test.txt
-          cat test.txt
-          echo ugh
+          #echo Changelist: >> test.md
+          #git log --oneline >> test.md
+          #cat test.md
+          cat test.md test2.md >> test3.md
+          cat test3.md
+
