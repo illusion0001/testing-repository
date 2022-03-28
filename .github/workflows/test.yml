@@ -13,6 +13,7 @@ jobs:
           fetch-depth: 0
 
       - run: |
+          echo git rev-list HEAD --count
           chmod +x *.sh
           ./cl.sh
 
