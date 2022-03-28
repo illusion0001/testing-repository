@@ -13,15 +13,5 @@ jobs:
           fetch-depth: 0
 
       - run: |
-          test=$(git log --oneline)
-          test+=$'\n<details>'
-          test+=$'\n<summary>Changelist</summary>'
-          test+=$'\n'
-          test+='\`\`\`'
-          test+='\`\`\`'
-          test+=$'\n'
-          test+='</details>'
-          echo "$test" > test4.md
           echo $(git log --oneline)$'\n<details>'$'\n<summary>Changelist</summary>'$'\n\`\`\`''\`\`\`'$'\n''</details>' > test5.md
-          cat test4.md
           cat test5.md
