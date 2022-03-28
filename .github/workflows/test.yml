@@ -15,3 +15,8 @@ jobs:
       - run: |
           chmod +x *.sh
           ./cl.sh
+
+        uses: actions/upload-artifact@v3
+        with:
+          path: cl.md
+          retention-days: 1
