@@ -12,4 +12,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: git log --oneline | tac | nl | tac >> test.txt | cat test.txt
+      - run: |
+          git log --oneline | tac | nl | tac >> test.txt
+          cat test.txt
