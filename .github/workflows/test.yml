@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run a one-line script
-        run: echo artifact_days=4 >> $GITHUB_ENV
+      - name: Checkout
+        uses: actions/checkout@v3
 
       - run: git log --oneline | tac | nl | tac
