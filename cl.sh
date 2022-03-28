@@ -1,4 +1,4 @@
-test+=$'\n<details>'
+test=$'\n<details>'
 test+=$'\n<summary>Changelog (Click to Expand)</summary>'
 test+=$'\n\n'
 test+=$'```'
@@ -7,5 +7,4 @@ test+=$'\n```'
 test+=$'\n\n'
 test+='</details>'
 echo "$test" > cl.md
-echo test
 cat cl.md
