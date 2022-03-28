@@ -13,11 +13,11 @@ jobs:
           fetch-depth: 0
 
       - run: |
-          test=$(git log --oneline)
           test+=$'\n<details>'
           test+=$'\n<summary>Changelist</summary>'
           test+=$'\n'
           test+='```'
+          test=$(git log --oneline)
           test+='```'
           test+=$'\n'
           test+='</details>'
