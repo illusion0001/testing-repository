@@ -13,6 +13,7 @@ jobs:
           fetch-depth: 0
 
       - run: |
+          echo Changelist: >> test.txt
           git log --oneline >> test.txt
           cat test.txt
           echo ugh
