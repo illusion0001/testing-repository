@@ -14,8 +14,8 @@ jobs:
 
       - run: |
           #echo Changelist: >> test.md
-          #git log --oneline >> test.md
+          git log --oneline >> test1.md
           #cat test.md
-          cat test.md test2.md >> test3.md
+          cat test.md test1.md test2.md >> test3.md
           cat test3.md
 
