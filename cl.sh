@@ -15,6 +15,6 @@ test+=$'</details>\n\n'
 test+=$''$(cat README.md)''
 test+=$'\n\n'
 test+=$'# Patch Files\n'
-test+=$'https://illusion0001.github.io/_patch/patch.zip\n\n'
+test+=$'https://illusion0001.github.io/_patch/patch.zip\n'
 echo "$test" >> changelist.md
 cat changelist.md
