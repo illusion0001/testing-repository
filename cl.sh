@@ -11,9 +11,10 @@ test+=$'<summary>Supporters (Click to Expand)</summary>\n'
 test+=$'\n'
 test+=$''$(cat _supporters.md)''
 test+=$'\n\n'
-test+=$'</details>\n'
+test+=$'</details>\n\n'
+test+=$''$(cat README.md)''
+test+=$'\n\n'
 test+=$'# Patch Files\n'
 test+=$'https://illusion0001.github.io/_patch/patch.zip\n\n'
 echo "$test" >> changelist.md
-cat README.md >> changelist.md
 cat changelist.md
